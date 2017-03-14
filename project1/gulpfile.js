@@ -22,3 +22,15 @@ gulp.task('testLess', function () {
 gulp.task('testWatch', function () {
     gulp.watch('src/less/*.less', ['testLess']); //当所有less文件发生改变时，调用testLess任务
 });
+
+
+
+//用于压缩和连接
+var concat  = require('gulp-concat');
+var uglify  = require('gulp-uglify');
+gulp.task('mergecommon', function () {
+    gulp.src(['build/js/lib/tip.js', 'build/js/load_page.js', 'build/js/common.js'])
+    .pipe(uglify({mangle:true}))
+    .pipe(concat('build/js/lib/common.min.js'))
+    .pipe(gulp.dest(''));  //公共模块压缩 
+})
