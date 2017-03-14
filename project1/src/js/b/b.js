@@ -1,5 +1,9 @@
 define(function(){
+
+	var bb = require('./bb');
 	return {
-		name:'b'
+		name:'b',
+
+		bb:bb
 	}
 })

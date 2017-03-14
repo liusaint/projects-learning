@@ -1,9 +1,10 @@
 define(function(){
 
-	var b = require('../b/b');
+	var aa = require('./aa');
+
 	return {
 		name:'a',
-		a:1,
-		b:b
+		a:c,
+		aa:aa
 	}
 })

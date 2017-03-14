@@ -1,68 +1,8 @@
-/******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId])
-/******/ 			return installedModules[moduleId].exports;
-
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			exports: {},
-/******/ 			id: moduleId,
-/******/ 			loaded: false
-/******/ 		};
-
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-
-/******/ 		// Flag the module as loaded
-/******/ 		module.loaded = true;
-
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-
-
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
-
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(0);
-/******/ })
-/************************************************************************/
-/******/ ([
-/* 0 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(){
-
-		var b = __webpack_require__(1);
-		return {
-			name:'a',
-			a:1,
-			b:b
-		}
-	}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
-
-/***/ },
-/* 1 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(){
-		return {
-			name:'b'
-		}
-	}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__))
-
-/***/ }
-/******/ ]);
+!function(r){function a(t){if(n[t])return n[t].exports;var o=n[t]={exports:{},id:t,loaded:!1};return r[t].call(o.exports,o,o.exports,a),o.loaded=!0,o.exports}var n={};return a.m=r,a.c=n,a.p="",a(0)}([/*!***********************!*\
+  !*** ./src/js/a/a.js ***!
+  \***********************/
+function(r,a,n){var t;t=function(){var r=n(/*! ./aa */1);return{name:"a",a:c,aa:r}}.call(a,n,a,r),!(void 0!==t&&(r.exports=t))},/*!************************!*\
+  !*** ./src/js/a/aa.js ***!
+  \************************/
+function(r,a,n){var t;t=function(){return{name:"aaa"}}.call(a,n,a,r),!(void 0!==t&&(r.exports=t))}]);
+//# sourceMappingURL=a.js.map
