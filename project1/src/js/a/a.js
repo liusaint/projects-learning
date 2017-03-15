@@ -1,4 +1,7 @@
 define(function() {
+	
+	//入口文件中导入一个less
+	require('../../less/a.less');
 
 	var aa = require('./aa');
 	var com = require('../com');
@@ -6,11 +9,11 @@ define(function() {
 	var res = {
 		name: 'a',
 		a() {
-			console.log(1);
+			console.log(2);
 		},
 		aa: aa,
 		com: com
 	}
-console.log(res);
+
 	return res;
 })
