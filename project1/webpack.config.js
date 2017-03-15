@@ -23,10 +23,10 @@ module.exports = {
 			loader: 'babel-loader?presets[]=es2015,presets[]=stage-0'
 		}, {
 			test: /\.css$/,
-			loaders: ['style-loader', 'css-loader', ]
+			loaders: ['style-loader', 'css-loader', 'autoprefixer-loader']
 		}, {
 			test: /\.less/,
-			loaders: ['style-loader', 'css-loader', 'less-loader'],
+			loaders: ['style-loader', 'css-loader', 'autoprefixer-loader','less-loader'],
 		}]
 	},
 	// //其它解决方案设置
