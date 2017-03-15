@@ -16,12 +16,13 @@ module.exports = {
 		// filename: '[name]-[hash].js',
 		filename: '[name].js'
 	},
-	// module: {
-	// 	//加载器配置
-	// 	loaders: [{
-
-	// 	}]
-	// },
+	module: {
+		//加载器配置
+		loaders: [{
+			test: /\.js$/,
+			loader: 'babel-loader?presets[]=es2015,presets[]=stage-0'
+		}]
+	},
 	// //其它解决方案设置
 	// rosolve: {
 
