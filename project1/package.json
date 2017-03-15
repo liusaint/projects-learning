@@ -4,7 +4,8 @@
   "description": "first project test",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1,这里面的内容可以在当前目录下使用npm run test这样来运行",
+    "web": "webpack  -w -p -d"
   },
   "author": "ls",
   "license": "ISC",
@@ -13,6 +14,7 @@
     "gulp-less": "^3.3.0",
     "gulp-minify-css": "^1.2.4",
     "gulp-watch-less": "^1.0.1",
-    "less": "^2.7.2"
+    "less": "^2.7.2",
+    "webpack": "^2.2.1"
   }
 }
