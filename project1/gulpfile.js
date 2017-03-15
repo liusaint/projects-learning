@@ -34,3 +34,14 @@ gulp.task('mergecommon', function () {
     .pipe(concat('build/js/lib/common.min.js'))
     .pipe(gulp.dest(''));  //公共模块压缩 
 })
+
+
+// var webpack = require('gulp-webpack');
+// var webpackConfig = require("./webpack.config.js");
+// gulp.task('webpack', function () {
+//     var myConfig = Object.create(webpackConfig);
+//     return gulp
+//         .src('./src/main.js')
+//         .pipe(webpack(myConfig))
+//         .pipe(gulp.dest('./build'));
+// });
