@@ -3,3 +3,5 @@
 * 引入jq\vue等外部应用。处理jq，vue共存的环境。
 * 代码检测
 * 路由
+* yii layout
+* ngix
