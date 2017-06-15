@@ -1,17 +1,24 @@
 <template>
 	<!--轮播组件-->
 	<slider :top_stories="topStories" v-cloak></slider>
-
+	<div class="list-box s-{{* date}}" v-for="item in allStories">
+		<ul>
+			<h2 class="title">{{item.date | dateTime}}</h2>
+      		<list-comp v-for="subItem in item.stories" :item="subItem"></list-comp>
+		</ul>
+	</div>
 </template>
 
 <script>
 	
 	import ajax from '../ajax'
 	import slider from '../components/slider.vue'
+	import listComp from './list-comp.vue'
 
 	export default{
 		components:{
-			slider
+			slider,
+			listComp
 		},
 		data () {return {
 			topStories: [],
