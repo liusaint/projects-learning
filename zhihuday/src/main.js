@@ -9,6 +9,8 @@ Vue.use(VueRouter)
 
 import list from './view/list.vue'
 import listDefault from './components/list-default.vue'
+import listTheme from './components/list-theme.vue'
+import author from './view/author.vue'
 import Swiper from 'swiper'
 window.Swiper = Swiper
 
@@ -21,14 +23,22 @@ let App = Vue.extend({})
 var router = new VueRouter()
 
 router.map({
-  '/': {
-    component: list,
-    subRoutes: {
-      '/': {
-        component: listDefault
-      }
-    }
-  }
+	'/': {
+		component: list,
+		subRoutes: {
+			'/': {
+				component: listDefault
+			},
+			'/theme/:id': {
+				name: 'theme',
+				component: listTheme
+			},
+			'/author/:id': {
+				name: 'author',
+				component: author
+			}
+		}
+	}
 })
 
 router.start(App, '#app')
