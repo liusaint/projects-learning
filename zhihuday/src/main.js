@@ -11,6 +11,8 @@ import list from './view/list.vue'
 import listDefault from './components/list-default.vue'
 import listTheme from './components/list-theme.vue'
 import author from './view/author.vue'
+import detail from './view/detail.vue'
+
 import Swiper from 'swiper'
 window.Swiper = Swiper
 
@@ -38,6 +40,10 @@ router.map({
 				component: author
 			}
 		}
+	},
+	'/detail/:id':{
+		name:'detail',
+		component:detail
 	}
 })
 

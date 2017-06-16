@@ -1,5 +1,5 @@
 <template>
-	<li class="list-detail-box" v-cloak>
+	<li class="list-detail-box" v-link="{name:'detail',params:{id:id}}" v-cloak>
 		<div class="list-content-box">
 			<p>{{item.title}}</p>
 			<p class="time" v-if="item.display_date">{{item.display_date}}</p>
