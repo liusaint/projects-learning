@@ -23,7 +23,7 @@
       <detail-content v-if="body" :content="body"> </detail-content>
       <iframe v-else :src="shareUrl" frameborder="0">您的浏览器不支持iframe</iframe>
 
-      <div v-if="section.name" class="section-box" v-link="">
+      <div v-if="section.name" class="section-box" v-link="{path: '/section'}">
         <div class="section-btn">
           <img :src="thumbnail | replaceUrl" alt="">
           <p>本文来自: {{section.name}} · 合集</p>
@@ -32,21 +32,33 @@
       </div>
     </div>
 
-
-
+    <!--分享部分-->
+    <div v-if="showShare" class="mask" @click="hiddenShare">
+      <div class="share-box" @click.stop>
+        <p class="share-title">分享</p>
+        <div class="share-content">
+          <div class="child"><div class="icon color-red"><i class="iconfont">&#xe624</i></div><p>新浪微博</p></div>
+          <div class="child"><div class="icon color-green-1"><i class="iconfont">&#xe626</i></div><p>微信</p></div>
+          <div class="child"><div class="icon color-green-2"><i class="iconfont">&#xe622</i></div><p>微信朋友圈</p></div>
+          <div class="child"><div class="icon color-yellow"><i class="iconfont">&#xe621</i></div><p>QQ空间</p></div>
+          <div class="child"><div class="icon color-blue-1"><i class="iconfont">&#xe625</i></div><p>推特</p></div>
+          <div class="child"><div class="icon color-blue-2"><i class="iconfont">&#xe623</i></div><p>QQ</p></div>
+          <div class="child"><div class="icon color-green-3"><i class="iconfont">&#xe620</i></div><p>豆瓣</p></div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
   import ajax from '../ajax'
-
-  import detailHeader from '../components/detail-header.vue'
   import detailContent from '../components/detail-content.vue'
+  import detailHeader from '../components/detail-header.vue'
 
   /*eslint-disable no-new*/
   export default{
     components: {
-		detailContent,
+      detailContent,
       detailHeader
     },
     data () {

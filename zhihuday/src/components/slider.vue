@@ -2,7 +2,7 @@
   <div class="slider">
     <div class="swiper-container">
       <div class="swiper-wrapper">
-        <div v-for="item in top_stories" class="swiper-slide" :style="{ backgroundImage: 'url(' + replace(item.image) + ')' }" >
+        <div v-for="item in top_stories" class="swiper-slide" :style="{ backgroundImage: 'url(' + replace(item.image) + ')' }" v-link="{name: 'detail', params: { id: item.id }}">
           <div class="swiper-mask"></div>
           <h1 class="slider-title">{{item.title}}</h1>
         </div>

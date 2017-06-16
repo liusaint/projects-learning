@@ -7,7 +7,6 @@
   export default{
     props: ['content'],
     data () {
-    	return {}
     },
     attached () {
     },

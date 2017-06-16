@@ -1,58 +1,36 @@
 <template>
-	<div class="sidebar-box" :class="{'show-sidebar':showSidebar}">
-		<div class="swiper-slide">
-			<!--侧边栏头部-->
-			<div class="sidebar-header" v-link="{name:'author',params:{id:888}}" @click="hiddenBar">
-				<div class="user">
-					<img src="http://7xqch8.com1.z0.glb.clouddn.com/4.pic_hd.jpg" alt="">
-					<p>yatessss</p>
-				</div>
-				<div class="function">
-					<div class="function-sub">
-						<i class="iconfont">&#xe614</i>
-						<p>我的收藏</p>
-					</div>
-					<div class="function-sub">
-						<i class="iconfont">&#xe60f</i>
-						<p>离线下载</p>
-					</div>
-				</div>
-			</div>
-
-			<!--侧边栏列表-->
-			<div class="sidebar-list">
-				<p v-link="{path: '/'}" class="sidebar-list-first" @click="hiddenBar"><i class="iconfont">&#xe61b</i>首页</p>
-				<ul class="sidebar-list-ul">
-					<li class="sidebar-list-li" v-for="item in list" @click="hiddenBar" v-link="{name:'theme',params:{id:item.id}}">
-						<p>{{item.name}}</p>
-						<div>+</div>
-					</li>
-				</ul>
-			</div>
-
-
-
-
-
-
-
-
-
-
-
-
-		</div>
-
-
-
-	</div>
-
-
-
-
+  <div class="sidebar-box" :class="{'show-sidebar':showSidebar}">
+    <div class="swiper-slide">
+      <!--侧边栏头部-->
+      <div class="sidebar-header" v-link="{name: 'author', params: { id: '888'}}" @click="hiddenBar">
+        <div class="user">
+          <img src="http://7xqch8.com1.z0.glb.clouddn.com/4.pic_hd.jpg" alt="">
+          <p>yatessss</p>
+        </div>
+        <div class="function">
+          <div class="function-sub">
+            <i class="iconfont">&#xe614</i>
+            <p>我的收藏</p>
+          </div>
+          <div class="function-sub">
+            <i class="iconfont">&#xe60f</i>
+            <p>离线下载</p>
+          </div>
+        </div>
+      </div>
+      <!--侧边栏列表-->
+      <div class="sidebar-list">
+        <p v-link="{path: '/'}" class="sidebar-list-first" @click="hiddenBar"><i class="iconfont">&#xe61b</i>首页</p>
+        <ul class="sidebar-list-ul">
+          <li class="sidebar-list-li" v-for="item in list" @click="hiddenBar" v-link="{name: 'theme', params: { id: item.id }}">
+            <p>{{item.name}}</p>
+            <div>+</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </template>
-
-
 
 <script>
   /*eslint-disable no-new*/

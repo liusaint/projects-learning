@@ -1,35 +1,24 @@
+<!--评论页推荐页等通用头部-->
 <template>
-  <div class="list-header">
+  <div class="common-header">
     <div class="header-icon" @click="goBack"><i class="iconfont">&#xe603</i></div>
-    <div class="header-cont"></div>
-    <div class="header-icon" @click="share"><i class="iconfont">&#xe61f</i></div>
-    <div class="header-icon" @click="showCollection"><i :class="{'collection': collection}" class="iconfont">&#xe604</i></div>
-    <div class="header-icon" v-link="{ path: '/comments'}"><i class="iconfont">&#xe606</i><span>{{comments}}</span></div>
-    <div class="header-icon"><i class="iconfont">&#xe611</i><span>{{popularity | toK}}</span></div>
+    <div class="header-cont"><p>{{title}}</p></div>
   </div>
 </template>
 
 <script>
   /*eslint-disable no-new*/
   export default{
-    props: ['popularity', 'comments', 'showShare'],
+    props: ['title'],
     data () {
       return {
-        collection: false
       }
     },
-    ready () {
+    attached () {
     },
     methods: {
       goBack () {
         window.history.back()
-      },
-      share () {
-        document.body.style.overflow = 'hidden'
-        this.showShare = !this.showShare
-      },
-      showCollection () {
-        this.collection = !this.collection
       }
     }
   }
@@ -41,9 +30,9 @@
     font-size: 19px;
     font-style:normal;
     color: #ffffff;
+    margin-right: 3px;
   }
-
-  .list-header{
+  .common-header{
     position: fixed;
     transform: translateZ(0);
     top: 0;
@@ -53,7 +42,6 @@
     background: #00A2EA;
     display: flex;
     flex-direction: row;
-    padding-right: 10px;
     .header-icon{
       flex:1;
       text-align: center;
@@ -70,12 +58,15 @@
       }
     }
     .header-cont {
-      flex: 2;
+      flex: 6;
       padding-left: 10px;
       >p{
         line-height: 50px;
         color: #ffffff;
         font-size:16px;
+        span{
+          font-size: 18px;
+        }
       }
     }
   }
