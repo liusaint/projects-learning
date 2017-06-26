@@ -1,6 +1,6 @@
 <template>	
 	<div class="author">
-		{{id}}
+		作者页面{{id}}
 	</div>
 </template>
 

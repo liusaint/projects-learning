@@ -1,3 +1,3 @@
 <template>
-	<div class="">list-theme</div>
+	<div class="">{{$route.params.id}}</div>
 </template>
