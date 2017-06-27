@@ -5,7 +5,6 @@
 <side-bar>
 
 </side-bar>
-
 	<router-view></router-view>
 </div>
 </template>
@@ -15,7 +14,8 @@ import sideBar from '../components/side-bar.vue'
 export default {
 	components:{
 		sideBar
-	}
+	},
+
 }
 	
 </script>

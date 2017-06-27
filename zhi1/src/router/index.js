@@ -6,6 +6,10 @@ import listDefault from '@/components/list-default.vue'
 import listTheme from '@/components/list-theme.vue'
 import author from '@/components/author.vue'
 
+
+import ajax from '@/ajax.js'
+window.ajax = ajax.ajax;
+
 Vue.use(Router)
 
 export default new Router({
