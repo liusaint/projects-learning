@@ -25,15 +25,8 @@
 					method: 'GET',
 					dataType:'json',
 					contentType:'application/x-www-form-urlencoded;charset=UTF-8;',
-					success:function(res){					
-
-						var len = res.others.length;
-						for(var i=0;i<len;i++){
-							_this.list.push(res.others[i]);
-						}
-
-
-
+					success:function(res){
+						_this.list = res.others;
 					}
 				})
 			}
