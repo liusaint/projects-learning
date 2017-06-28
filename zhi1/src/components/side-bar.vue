@@ -3,7 +3,7 @@
 
 		<router-link to="/author/9" tag="li">author页面</router-link>
 		<router-link to="/" tag="li">首页</router-link>
-		<router-link v-for = "theme in list" v-bind:to="'/theme/' + theme.id" tag="li" :key="theme.id">{{theme.title}}</router-link>
+		<router-link v-for = "theme in list" v-bind:to="'/theme/' + theme.id" tag="li" :key="theme.id">{{theme.name}}</router-link>
 	</ul>
 </template>
 
@@ -11,27 +11,29 @@
 	export default {
 		data:()=>{
 			return {
-				// themes:[
-				// {id:1,title:'theme1'},
-				// {id:2,title:'theme2'}
-				// ]
 				list:[]
 			}
 		},
-		mounted: function () {  
-		debugger;        	
+		mounted: function () {		      	
 			this.getList();
 		},
 		methods:{
 			getList() {
-				let _this = this;
-				debugger;
+				let _this = this;		
 				ajax({
 					url: '/news-at/api/4/themes',
 					method: 'GET',
-					success:function(res){
-						debugger;
-						_this.$set('list',res.others);
+					dataType:'json',
+					contentType:'application/x-www-form-urlencoded;charset=UTF-8;',
+					success:function(res){					
+
+						var len = res.others.length;
+						for(var i=0;i<len;i++){
+							_this.list.push(res.others[i]);
+						}
+
+
+
 					}
 				})
 			}
