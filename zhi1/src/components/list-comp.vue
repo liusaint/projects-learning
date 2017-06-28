@@ -1,3 +1,8 @@
 <template>
-	<div class="">列表内容</div>
+	<div class="">{{story.title}}</div>
 </template>
+<script>
+	export default {
+		props:['story']
+	}
+</script>

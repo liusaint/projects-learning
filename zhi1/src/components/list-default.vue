@@ -5,7 +5,7 @@
 </template>
 
 <script>
-	import listComp from 'list-comp.vue';
+	import listComp from './list-comp.vue';
 	export default {
 		components:{
 			listComp
