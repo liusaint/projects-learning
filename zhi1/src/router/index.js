@@ -5,6 +5,7 @@ import list from '../view/list.vue'
 import listDefault from '@/components/list-default.vue'
 import listTheme from '@/components/list-theme.vue'
 import author from '@/components/author.vue'
+import article from '../view/article.vue'
 
 
 import ajax from '@/ajax.js'
@@ -32,6 +33,11 @@ export default new Router({
 
 			]
 		}, 
+		{
+			path:'/article/:id',
+			component:article
+		}
+
 	]
 });
 
