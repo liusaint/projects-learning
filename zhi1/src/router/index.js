@@ -6,7 +6,7 @@ import listDefault from '@/components/list-default.vue'
 import listTheme from '@/components/list-theme.vue'
 import author from '@/components/author.vue'
 import article from '../view/article.vue'
-
+import editors from '../view/editors.vue'
 
 import ajax from '@/ajax.js'
 window.ajax = ajax.ajax;
@@ -36,6 +36,10 @@ export default new Router({
 		{
 			path:'/article/:id',
 			component:article
+		},
+		{
+			path:'/editors/:id',
+			component:editors
 		}
 
 	]

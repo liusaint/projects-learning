@@ -1,6 +1,9 @@
 <template>
 	<div class="">{{$route.params.id}}
-
+<img :src="background" alt="">
+<router-link v-bind:to="'/'" tag="ul">
+	<li v-for="editor in editors">{{editor.name}}</li>
+</router-link>
 
 		<list-comp v-for="story in stories" :story="story"></list-comp>
 	</div>
@@ -15,6 +18,8 @@
 		data:()=>{ 
 			return {
 				stories:[],
+				background:'',
+				editors:[],
 			}			
 		},
 		mounted:function(){
@@ -34,6 +39,8 @@
 					contentType:'application/x-www-form-urlencoded;charset=UTF-8;',
 					success:function(res){
 						_this.stories = res.stories;
+						_this.background = res.background;
+						_this.editors = res.editors;
 					}
 				})
 			}
